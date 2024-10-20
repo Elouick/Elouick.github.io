@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Poster des M2 sur IA</title>
+    <link rel="stylesheet" type="text/css" href="posterstyle.css">
+</head>
+<body>
+   <header>
+    <h1>Le poster 1 est intitulé : "le Reptile"</h1>
+    <img src="UPEC_LOGO.jpg">
+   </header> 
+   <div class="texteàdroite">
+    <p>Les posters sont composés d'images générés par une intelligence artificielle dite <span class="mot-defini" data-definition="Une IA est une intelligence artificielle">"IA"</span></p>
+    <p> Ceci est un caméléon </p>
+    </div>
+   <div id="popup" class="popup"></div>
+   <div class="imageàgauche">
+    <p> <img src="Image_poster_1_cameleon.jpg" alt="Image_du_Poster"/></p>
+    </div>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const motsDefinis = document.querySelectorAll('.mot-defini');
+            const popup = document.getElementById('popup');
+
+            motsDefinis.forEach(mot => {
+                mot.addEventListener('click', function(e) {
+                    const definition = this.getAttribute('data-definition');
+                    popup.textContent = definition;
+                    popup.style.display = 'block';
+                    popup.style.left = e.pageX + 'px';
+                    popup.style.top = e.pageY + 'px';
+                });
+            });
+
+            document.addEventListener('click', function(e) {
+                if (!e.target.classList.contains('mot-defini')) {
+                    popup.style.display = 'none';
+                }
+            });
+        });
+    </script>
+</body>
+<footer>
+    <p>Voici le nom des auteurs du poster</p>
+    <ul>
+        <li>Jean Romain</li>
+        <li>Charline Bare</li>
+    </ul>
+</footer>
+</html>

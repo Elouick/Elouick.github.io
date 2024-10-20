@@ -1,0 +1,57 @@
+.mot-defini {
+    text-decoration: underline;
+    cursor: pointer;
+    color: blue;
+}
+    .popup {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    border: 1px solid #ccc;
+    padding: 10px;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+}
+body {
+    background-color: bisque;
+}
+div.imageàgauche img {
+    text-align: left;
+    height: 400px;
+    width: auto;
+}
+div.texteàdroite {
+    float: right;
+    font-size:x-large;
+    position: relative;
+    top: 50px;
+}
+body header img {
+    height: 100px;
+    width: auto;
+    position: absolute;
+    top: 5px;
+    right: 5px;
+    border-bottom: 3px #b4bcb8 solid;
+    border-top: 3px #b4bcb8 solid;
+    border-left: 3px #b4bcb8 solid;
+    border-right: 3px #b4bcb8 solid;
+}
+body header h1 {
+    text-align: center;
+    color: cornflowerblue;
+    text-shadow: -1px 0 #b4bcb8, 0 1px #b4bcb8,
+      1px 0 #b4bcb8, 0 -1px #b4bcb8;
+}
+
+footer {
+    position: absolute;
+    bottom: 0;
+}
+
+.listepage li {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+}
